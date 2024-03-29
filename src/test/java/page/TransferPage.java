@@ -1,6 +1,5 @@
 package page;
 
-import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
 import data.DataHelper;
 
@@ -22,14 +21,14 @@ public class TransferPage {
         transferHead.shouldBe(visible);
     }
 
-    public DashboardPage validTransfer(String amountToTransfer, DataHelper.CardInfo cardInfo) {
+    public DashboardPage validTransfer(String amountToTransfer, String cardInfo) {
         makeTransfer(amountToTransfer, cardInfo);
         return new DashboardPage();
     }
 
-    public void makeTransfer(String amountToTransfer, DataHelper.CardInfo cardInfo) {
+    public void makeTransfer(String amountToTransfer, String cardInfo) {
         amountInput.setValue(amountToTransfer);
-        fromInput.setValue(cardInfo.getCardNumber());
+        fromInput.setValue(cardInfo);
         transferButton.click();
     }
 

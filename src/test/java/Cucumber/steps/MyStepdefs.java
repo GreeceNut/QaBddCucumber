@@ -2,7 +2,6 @@ package Cucumber.steps;
 
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.Selenide;
-import data.DataHelper;
 import io.cucumber.java.Before;
 import io.cucumber.java.ru.И;
 import io.cucumber.java.ru.Когда;
@@ -16,9 +15,6 @@ import page.VerificationPage;
 import java.util.HashMap;
 import java.util.Map;
 
-import static com.codeborne.selenide.Selenide.open;
-import static data.DataHelper.*;
-import static data.DataHelper.getCardSecond;
 import static org.junit.Assert.assertEquals;
 
 public class MyStepdefs {
